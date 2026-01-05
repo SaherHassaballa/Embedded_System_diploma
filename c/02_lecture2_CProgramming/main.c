@@ -38,19 +38,22 @@ int signed_Summation(unsigned int Num1, unsigned int Num2);
 /******************* Sub-Programe Decleration section End ********************/
 
 int main() {
-  // when you choose your data type take care about range of num you needed and the using of memory must be optial
+  // when you choose your data type take care about range of num you needed and
+  // the using of memory must be optial
   float FNum1 = 10.6;
   double DNum1 = 20.299919991;
   int Result = signed_Summation(NumberOne, NumberTwo);
-  int Result_Size = sizeof(Result);
+  // not true more using for memory just use it without allocate memory
+  // int Result_Size = sizeof(Result);
+  // printf("the size of Result : %i \n", Result_Size);
   double DResult = FNum1 + DNum1;
-  int DResult_Size = sizeof(DResult);
   printf("the result : %i \n", Result);
-  printf("the size of Result : %i \n", Result_Size);
+  printf("the size of Result : %i \n", sizeof(Result));
   printf("the floating Result is : %f\n", DResult);
-  printf("the size of DResult : %i \n", DResult_Size);
-  // its extern so no compile error in linking it search about it in the anthor files if not exist will exception linking error
-  //printf("x = %i",x); 
+  printf("the size of DResult : %i \n", sizeof(DResult));
+  // its extern so no compile error in linking it search about it in the anthor
+  // files if not exist will exception linking error
+  // printf("x = %i",x);
 
   return 0;
 }
