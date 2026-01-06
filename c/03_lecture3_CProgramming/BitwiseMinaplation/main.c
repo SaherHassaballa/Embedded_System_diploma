@@ -29,8 +29,12 @@ unsigned char ButtonState = 0; // Button state
 
 /******************* Global Decleration section Start ******************* */
 
-/******************* Sub-Programe Decleration section Start
- * *********************/
+/******************* Sub-Programe Decleration section Start **********************/
+int set (int Buttons , int ButtonNum);
+int clear (int Buttons , int ButtonNum);
+int toggle (int Buttons , int BitToggle);
+int invert (int Buttons , int ButtonNum)
+
 /******************* Sub-Programe Decleration section End ********************/
 
 int main() {
@@ -149,6 +153,18 @@ int main() {
 }
 
 /******************* Sub-Programe section Start ******************* */
+int set (int Buttons , int ButtonNum){
+    Buttons ^= (1 << ButtonNum);
+};
+int clear (int Buttons , int ButtonNum){
+    Buttons = (1 << ButtonNum);
+};
+int toggle (int Buttons , int ButtonNum){
+    Buttons ^= (1 << ButtonNum);
+};
+int invert (int Buttons , int ButtonNum){
+    Buttons = ~(Buttons);
+};
 
 /******************* Sub-Programe section End ******************* */
 
