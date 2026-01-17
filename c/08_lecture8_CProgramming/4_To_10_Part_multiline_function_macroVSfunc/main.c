@@ -1,4 +1,5 @@
 #include "main.h"
+#include "lcd.h"
 
 int main (){
     unsigned int Res = SUMMING(8,9) * PI;
@@ -17,7 +18,18 @@ int main (){
     CLEAR_BIT(value , 1);
     printf("the value after clear bit1 : %i \n" ,value);
     TOGGLE_BIT(value , 1);
+    // negligt part in you code using conditional compilation
+    #if 0 
     printf("the value after toggle bit1 : %i \n" ,value);
+    printf("======================= \n");
+    Led_Mode_selection();
+    #endif
+
+    //use predefine macro (all macros will be replacement after preprocessing process)
+    #line 1 "app.c"
+    printf("the file name : %s , the line num : %i , the date : %s" , __FILE__ , __LINE__ , __DATE__ );
+
+    printf("Hi " ",I am Saher"); // is true 
 
 } 
 

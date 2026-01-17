@@ -1,3 +1,5 @@
+#ifndef _MAIN_H_
+#define _MAIN_H_
 /*Include Section*/
 #include <stdio.h>
 #include <stdint.h>
@@ -34,3 +36,19 @@ TEST \
 /*Function Declarations Section*/
 
 int summing(int num1 , int num2);
+
+//using prepro directive operator defined operator defined() return true or false
+#if defined(PI)
+#define STATE 1
+#else
+#define STATE 0
+#endif 
+
+#if !defined(PI)
+#define NSTATE 1
+#else
+#define NSTATE 0
+#error "saher love"
+#endif 
+
+#endif
