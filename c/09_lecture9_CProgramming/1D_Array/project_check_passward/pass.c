@@ -13,7 +13,7 @@ int main()
     //     scanf("%c" , &Password_User[count]);
     //     fflush(stdin);
     // }
-
+    //or use if for check each element 
     if(strcmp((char*)Password, (char*)Password_User) == 0){
         printf("your password is correct\n");
     }else{
