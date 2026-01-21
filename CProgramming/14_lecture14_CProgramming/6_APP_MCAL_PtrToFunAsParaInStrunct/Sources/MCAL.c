@@ -4,3 +4,11 @@ void MoveForward(void (* PtrFun) (void)){
     printf("move forward done , baby \n");
     PtrFun();
 }
+void MoveBackward(Motor_t  PtrFun){
+    printf("move backward done , baby \n");
+    PtrFun.PtrFun();
+}
+void MoveLeft(void (*PtrFun) (void)){ 
+    printf("move left done , baby \n");
+    PtrFun();
+}
