@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1631892589 source:d:\embedded systems\02_data_structures_recods\01 stack\stackarrayds\stackarrayds\main.c
+	<stdio.h>
+	<stdlib.h>
+	"StackArrayDS.h"
+
+1631894657 d:\embedded systems\02_data_structures_recods\01 stack\stackarrayds\stackarrayds\stackarrayds.h
+	<stdlib.h>
+	"Platform_Types.h"
+
+1631476735 d:\embedded systems\02_data_structures_recods\01 stack\stackarrayds\stackarrayds\platform_types.h
+
+1631892301 source:d:\embedded systems\02_data_structures_recods\01 stack\stackarrayds\stackarrayds\stackarrayds.c
+	"StackArrayDS.h"
+
