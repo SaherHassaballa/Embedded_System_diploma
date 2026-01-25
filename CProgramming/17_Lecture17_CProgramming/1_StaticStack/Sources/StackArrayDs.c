@@ -41,7 +41,7 @@ StackArray_t *CreateStack(uint32 MaxSize , State_t *StatePtr){
  * @brief This function to push element in stack
  * @param stackPtr to push in
  * @param itemPtr to push it
- * @retval Pointer to StackArray_t
+ * @retval Pointer to State_t
  */
 
 State_t push(StackArray_t *stack, void *itemPtr){
@@ -63,6 +63,13 @@ State_t push(StackArray_t *stack, void *itemPtr){
 
     return STACKOK;
 }
+
+
+/*
+ * @brief This function to pop element from stack
+ * @param stackPtr to pop from
+ * @retval Pointer to State_t
+ */
 
 
 State_t pop(StackArray_t *stack){
@@ -89,6 +96,11 @@ State_t pop(StackArray_t *stack){
 }
 
 
+/*
+ * @brief This function to get top element
+ * @param stackPtr to pop from
+ * @retval Pointer to State_t
+ */
 
 
 State_t top(StackArray_t *stack){
@@ -113,6 +125,11 @@ State_t top(StackArray_t *stack){
 }
 
 
+/*
+ * @brief This function to get top element
+ * @param stackPtr
+ * @retval Pointer to State_t
+ */
 
 
 State_t PrintStack(StackArray_t *stack){
