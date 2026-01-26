@@ -6,12 +6,12 @@ int main(){
     State_t CreateState = STACKOK ;
     StackArray_t *stack = NULL ;
 
-    uint32 number1 = 10 ;
-    uint32 number2 = 20 ;
-    uint32 number3 = 30 ;
-    uint32 number4 = 40 ;
-    uint32 number5 = 50 ;
-    uint32 number6 = 60 ;
+    uint16 number1 = 10 ;
+    uint16 number2 = 20 ;
+    uint16 number3 = 30 ;
+    uint16 number4 = 40 ;
+    uint16 number5 = 50 ;
+    uint16 number6 = 60 ;
 
 
     printf("Enter Stack size : ");
