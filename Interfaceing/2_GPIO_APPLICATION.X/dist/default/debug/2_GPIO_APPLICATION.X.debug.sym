@@ -11,8 +11,8 @@ __Hirdata 0 0 CODE 0
 __Lirdata 0 0 CODE 0
 __HRAM 0 0 ABS 0
 __LRAM 1 0 ABS 0
-__Hconfig 0 0 ABS 0
-__Lconfig 0 0 ABS 0
+__Hconfig 30000E 0 CONFIG 4
+__Lconfig 0 0 CONFIG 4
 ___inthi_stack_hi 0 0 STACK 2
 __Hbigram 0 0 ABS 0
 __Lbigram 0 0 ABS 0
@@ -153,7 +153,7 @@ __ramtop 1000 0 RAM 0
 __mediumconst 1000 0 SMALLCONST 0
 __Hconst 0 0 CONST 0
 __Lconst 0 0 CONST 0
-__Hspace_4 0 0 ABS 0
+__Hspace_4 60000E 0 ABS 0
 __Lspace_4 0 0 ABS 0
 ___stack_lo 0 0 STACK 2
 __Hbank10 0 0 ABS 0
@@ -193,14 +193,14 @@ cstackCOMRAM 1 4 COMRAM 1 1
 cinit 1002 100B CODE 1002 0
 %locals
 dist/default/debug\2_GPIO_APPLICATION.X.debug.o
-C:\Users\saher\AppData\Local\Temp\xcAsn0k.0\driver_tmp_1.s
-123 1002 0 CODE 0
-125 1002 0 CODE 0
-128 1002 0 CODE 0
-134 1002 0 CODE 0
-136 1002 0 CODE 0
-137 1004 0 CODE 0
+C:\Users\saher\AppData\Local\Temp\xcAsft4.0\driver_tmp_1.s
+978 1002 0 CODE 0
+980 1002 0 CODE 0
+983 1002 0 CODE 0
+989 1002 0 CODE 0
+991 1002 0 CODE 0
+992 1004 0 CODE 0
 application.c
-14 1008 0 CODE 0
+13 1008 0 CODE 0
+15 1008 0 CODE 0
 16 1008 0 CODE 0
-17 1008 0 CODE 0

@@ -8,16 +8,7 @@
 #ifndef COMPILER_H
 #define	COMPILER_H
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
-
-
-
-
-#ifdef	__cplusplus
-}
-#endif
+#include <xc.h>
 
 #endif	/* COMPILER_H */
 
