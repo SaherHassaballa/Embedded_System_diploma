@@ -5,9 +5,8 @@
  * Created on 27 June 2026, 00:56
  */
 
-#include <stdio.h>
-#include <stdlib.h>
 
+#include "application.h"
 /*
  * 
  */
