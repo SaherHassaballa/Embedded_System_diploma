@@ -3,9 +3,9 @@
  <FRAME activewindow="0">
   <PLACEMENT>2c00000002000000030000000083ffff0083ffffffffffffffffffffb90000000c000000c7060000f0030000</PLACEMENT>
   <WINDOW type="default" module="ISIS">
-   <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="135" flipped="0" gridminor="254000" gridmode="32" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
+   <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="134" flipped="0" gridminor="254000" gridmode="32" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
     <world y1="-26670000" x1="-40640000" y2="26670000" x2="40640000"/>
-    <centre x="10414000" y="-2276593"/>
+    <centre x="-1016000" y="-717801"/>
     <origin x="0" y="0"/>
    </editor>
   </WINDOW>
@@ -18,9 +18,9 @@
   </editor>
  </MODULE>
  <MODULE name="ISIS">
-  <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="135" flipped="0" gridminor="254000" gridmode="32" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
+  <editor metric="0" gridmajor="2540000" mode="00000000" zoom="-1" scale="134" flipped="0" gridminor="254000" gridmode="32" snapidx="2" snap="254000" xcursor="0" orgmode="0" snaprange="127000">
    <world y1="-26670000" x1="-40640000" y2="26670000" x2="40640000"/>
-   <centre x="10414000" y="-2276593"/>
+   <centre x="-1016000" y="-717801"/>
    <origin x="0" y="0"/>
   </editor>
  </MODULE>
@@ -34,11 +34,13 @@
      <ITEM name="Version">100</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="350" x="68" flags="00000032" y="180" h="200" pid="1" iid="-1">
+   <POPUP w="476" x="376" flags="00008033" y="251" h="200" pid="1" iid="-1">
     <PROPERTIES>
      <ITEM name="Address Column Width">100</ITEM>
      <ITEM name="AutoResize">No</ITEM>
      <ITEM name="Gridlines">Yes</ITEM>
+     <ITEM name="Item 0">"LATC","0x0F8B",00000001,0000000C,3979,1,0,00000002,0,00000000,00000000</ITEM>
+     <ITEM name="Item 1">"TRISC","0x0F94",00000001,0000000C,3988,1,0,00000002,0,00000000,00000000</ITEM>
      <ITEM name="Name Column Width">100</ITEM>
      <ITEM name="Previous Value Column Width">100</ITEM>
      <ITEM name="ShowAddresses">Yes</ITEM>
@@ -49,8 +51,8 @@
      <ITEM name="Type Column Width">100</ITEM>
      <ITEM name="Value Column Width">100</ITEM>
      <ITEM name="Version">100</ITEM>
-     <ITEM name="Watch Expression Column Width">100</ITEM>
-     <ITEM name="nItems">0</ITEM>
+     <ITEM name="Watch Expression Column Width">-26</ITEM>
+     <ITEM name="nItems">2</ITEM>
     </PROPERTIES>
    </POPUP>
    <POPUP w="52" x="88" flags="00000008" y="200" h="12" pid="3" iid="1">
