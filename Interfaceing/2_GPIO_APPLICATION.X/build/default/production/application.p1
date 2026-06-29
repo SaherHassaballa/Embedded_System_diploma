@@ -1,4 +1,12 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"54 application.c
+[; ;application.c: 54:     {
+[s S295 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S295 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
+"52
+[; ;application.c: 52: {
+[u S294 `S295 1 `uc 1 ]
+[n S294 . . ALL_BITS ]
 [p mainexit ]
 [v F2581 `(v ~T0 @X0 1 tf1`ul ]
 "20 C:\Program Files\Microchip\xc8\v3.10\pic\include/builtins.h
@@ -481,61 +489,145 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x EBTR3  =  OFF       ]
 "68
 [p x EBTRB  =  OFF       ]
+[v F2962 `(v ~T0 @X0 1 tf ]
+"117 application.c
+[; ;application.c: 117: static __attribute__((inline)) void GPIO_PortC_Init(void)
+[v _GPIO_PortC_Init `TF2962 ~T0 @X0 1 s ]
+"118
+[; ;application.c: 118: {
+{
+[e :U _GPIO_PortC_Init ]
+[f ]
+"119
+[; ;application.c: 119:     (*((volatile uint8 *)(0xF94))) = 0x00;
+[e = *U -> -> 3988 `i `*Vuc -> -> 0 `i `uc ]
+"120
+[; ;application.c: 120: }
+[e :UE 298 ]
+}
+[v F2964 `(v ~T0 @X0 1 tf ]
+"122
+[; ;application.c: 122: static __attribute__((inline)) void GPIO_Set_Pin6_High(void)
+[v _GPIO_Set_Pin6_High `TF2964 ~T0 @X0 1 s ]
+"123
+[; ;application.c: 123: {
+{
+[e :U _GPIO_Set_Pin6_High ]
+[f ]
+"124
+[; ;application.c: 124:     (*((volatile LATC_t *)0xF8B)).LATC6 = 1;
+[e = . . *U -> -> 3979 `i `*VS294 0 6 -> -> 1 `i `uc ]
+"125
+[; ;application.c: 125: }
+[e :UE 299 ]
+}
+[v F2966 `(v ~T0 @X0 1 tf1`uc ]
+"127
+[; ;application.c: 127: static __attribute__((inline)) void GPIO_Write_PortC(uint8 value)
+[v _GPIO_Write_PortC `TF2966 ~T0 @X0 1 s ]
+"128
+[; ;application.c: 128: {
+{
+[e :U _GPIO_Write_PortC ]
+"127
+[; ;application.c: 127: static __attribute__((inline)) void GPIO_Write_PortC(uint8 value)
+[v _value `uc ~T0 @X0 1 r1 ]
+"128
+[; ;application.c: 128: {
+[f ]
+"129
+[; ;application.c: 129:     (*((volatile LATC_t *)0xF8B)).ALL_BITS = value;
+[e = . *U -> -> 3979 `i `*VS294 1 _value ]
+"130
+[; ;application.c: 130: }
+[e :UE 300 ]
+}
 [v $root$_main `(v ~T0 @X0 0 e ]
-"23 application.c
-[; ;application.c: 23: int main() {
+"136
+[; ;application.c: 136: int main(void)
 [v _main `(i ~T0 @X0 1 ef ]
+"137
+[; ;application.c: 137: {
 {
 [e :U _main ]
 [f ]
-"24
-[; ;application.c: 24:     ((*((volatile unsigned char *)(0xF94)))) = 0x00;
-[e = *U -> -> 3988 `i `*Vuc -> -> 0 `i `uc ]
-"25
-[; ;application.c: 25:     ((*((volatile unsigned char *)(0xF8B)))) = 0x55;
-[e = *U -> -> 3979 `i `*Vuc -> -> 85 `i `uc ]
-"27
-[; ;application.c: 27:     _delay((unsigned long)((2000)*(8000000UL/4000.0)));
+"138
+[; ;application.c: 138:     GPIO_PortC_Init();
+[e ( _GPIO_PortC_Init ..  ]
+"140
+[; ;application.c: 140:     GPIO_Write_PortC(0xAA);
+[e ( _GPIO_Write_PortC (1 -> -> 170 `i `uc ]
+"142
+[; ;application.c: 142:     _delay((unsigned long)((2000)*(8000000UL/4000.0)));
 [e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"30
-[; ;application.c: 30:     (((*((volatile unsigned char *)(0xF8B)))) |= (1 << 0x1));
-[e =| *U -> -> 3979 `i `*Vuc -> << -> 1 `i -> 1 `i `uc ]
-"31
-[; ;application.c: 31:     ((*((volatile unsigned char *)(0xF8B)))) |= (1 << 0x3);
-[e =| *U -> -> 3979 `i `*Vuc -> << -> 1 `i -> 3 `i `uc ]
-"33
-[; ;application.c: 33:     _delay((unsigned long)((2000)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"36
-[; ;application.c: 36:     (((*((volatile unsigned char *)(0xF8B)))) &= ~(1 << 0x1));
-[e =& *U -> -> 3979 `i `*Vuc -> ~ << -> 1 `i -> 1 `i `uc ]
-"37
-[; ;application.c: 37:     ((*((volatile unsigned char *)(0xF8B)))) &= ~(1 << 0x3);
-[e =& *U -> -> 3979 `i `*Vuc -> ~ << -> 1 `i -> 3 `i `uc ]
-"39
-[; ;application.c: 39:     _delay((unsigned long)((2000)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"42
-[; ;application.c: 42:     (((*((volatile unsigned char *)(0xF8B)))) ^= (1 << 0x1));
-[e =^ *U -> -> 3979 `i `*Vuc -> << -> 1 `i -> 1 `i `uc ]
-"43
-[; ;application.c: 43:     ((*((volatile unsigned char *)(0xF8B)))) ^= (1 << 0x3);
-[e =^ *U -> -> 3979 `i `*Vuc -> << -> 1 `i -> 3 `i `uc ]
-"45
-[; ;application.c: 45:     while(1) {
-[e :U 296 ]
+"144
+[; ;application.c: 144:     GPIO_Set_Pin6_High();
+[e ( _GPIO_Set_Pin6_High ..  ]
+"146
+[; ;application.c: 146:    while(1)
+[e :U 303 ]
+"147
+[; ;application.c: 147: {
 {
-"47
-[; ;application.c: 47:     }
+"148
+[; ;application.c: 148:     (*((volatile LATC_t *)0xF8B)).ALL_BITS = 0x00;
+[e = . *U -> -> 3979 `i `*VS294 1 -> -> 0 `i `uc ]
+"149
+[; ;application.c: 149:     _delay((unsigned long)((500)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"151
+[; ;application.c: 151:     (*((volatile LATC_t *)0xF8B)).LATC0 = 1;
+[e = . . *U -> -> 3979 `i `*VS294 0 0 -> -> 1 `i `uc ]
+"152
+[; ;application.c: 152:     (*((volatile LATC_t *)0xF8B)).LATC7 = 1;
+[e = . . *U -> -> 3979 `i `*VS294 0 7 -> -> 1 `i `uc ]
+"153
+[; ;application.c: 153:     _delay((unsigned long)((500)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"155
+[; ;application.c: 155:     (*((volatile LATC_t *)0xF8B)).LATC1 = 1;
+[e = . . *U -> -> 3979 `i `*VS294 0 1 -> -> 1 `i `uc ]
+"156
+[; ;application.c: 156:     (*((volatile LATC_t *)0xF8B)).LATC6 = 1;
+[e = . . *U -> -> 3979 `i `*VS294 0 6 -> -> 1 `i `uc ]
+"157
+[; ;application.c: 157:     _delay((unsigned long)((500)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"159
+[; ;application.c: 159:     (*((volatile LATC_t *)0xF8B)).LATC2 = 1;
+[e = . . *U -> -> 3979 `i `*VS294 0 2 -> -> 1 `i `uc ]
+"160
+[; ;application.c: 160:     (*((volatile LATC_t *)0xF8B)).LATC5 = 1;
+[e = . . *U -> -> 3979 `i `*VS294 0 5 -> -> 1 `i `uc ]
+"161
+[; ;application.c: 161:     _delay((unsigned long)((500)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"163
+[; ;application.c: 163:     (*((volatile LATC_t *)0xF8B)).LATC3 = 1;
+[e = . . *U -> -> 3979 `i `*VS294 0 3 -> -> 1 `i `uc ]
+"164
+[; ;application.c: 164:     (*((volatile LATC_t *)0xF8B)).LATC4 = 1;
+[e = . . *U -> -> 3979 `i `*VS294 0 4 -> -> 1 `i `uc ]
+"165
+[; ;application.c: 165:     _delay((unsigned long)((500)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"167
+[; ;application.c: 167:     (*((volatile LATC_t *)0xF8B)).ALL_BITS = 0x00;
+[e = . *U -> -> 3979 `i `*VS294 1 -> -> 0 `i `uc ]
+"168
+[; ;application.c: 168:     _delay((unsigned long)((500)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"169
+[; ;application.c: 169: }
 }
-[e :U 295 ]
-[e $U 296  ]
-[e :U 297 ]
-"49
-[; ;application.c: 49:     return (0);
+[e :U 302 ]
+[e $U 303  ]
+[e :U 304 ]
+"171
+[; ;application.c: 171:     return 0;
 [e ) -> 0 `i ]
-[e $UE 294  ]
-"50
-[; ;application.c: 50: }
-[e :UE 294 ]
+[e $UE 301  ]
+"172
+[; ;application.c: 172: }
+[e :UE 301 ]
 }

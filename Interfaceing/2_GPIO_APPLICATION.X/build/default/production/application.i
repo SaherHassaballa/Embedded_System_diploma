@@ -7,13 +7,7 @@
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "application.c" 2
-
-
-
-
-
-
-
+# 10 "application.c"
 # 1 "./application.h" 1
 # 11 "./application.h"
 # 1 "./ECU_Layer/LED/ecu_led.h" 1
@@ -4883,33 +4877,132 @@ char *tempnam(const char *, const char *);
 # 14 "./ECU_Layer/LED/../../MCAL_Layer/GPIO/hal_gpio.h" 2
 # 12 "./ECU_Layer/LED/ecu_led.h" 2
 # 12 "./application.h" 2
-# 9 "application.c" 2
-# 23 "application.c"
-int main() {
-    ((*((volatile unsigned char *)(0xF94)))) = 0x00;
-    ((*((volatile unsigned char *)(0xF8B)))) = 0x55;
+# 11 "application.c" 2
+
+
+
+
+typedef unsigned char uint8;
+# 51 "application.c"
+typedef union
+{
+    struct
+    {
+        unsigned LATC0 : 1;
+        unsigned LATC1 : 1;
+        unsigned LATC2 : 1;
+        unsigned LATC3 : 1;
+        unsigned LATC4 : 1;
+        unsigned LATC5 : 1;
+        unsigned LATC6 : 1;
+        unsigned LATC7 : 1;
+    };
+
+    uint8 ALL_BITS;
+
+} LATC_t;
+
+
+
+
+
+
+
+typedef union
+{
+    struct
+    {
+        unsigned SSPM : 4;
+        unsigned CKP : 1;
+        unsigned SSPEN : 1;
+        unsigned SSPOV : 1;
+        unsigned WCOL : 1;
+    };
+
+    uint8 ALL_BITS;
+
+} SSPCON1_t;
+
+
+
+
+
+
+
+typedef enum
+{
+    GPIO_LOW = 0,
+    GPIO_HIGH
+} gpio_logic_t;
+
+
+typedef enum
+{
+    SPI_MASTER_MODE_FOSC_DIV_4,
+    SPI_MASTER_MODE_FOSC_DIV_16,
+    SPI_MASTER_MODE_FOSC_DIV_64,
+    SPI_MASTER_MODE_FOSC_TMR2,
+    SPI_SLAVE_MODE_SS_ENABLED,
+    SPI_SLAVE_MODE_SS_DISABLED
+} spi_mode_t;
+
+
+
+
+
+static __attribute__((inline)) void GPIO_PortC_Init(void)
+{
+    (*((volatile uint8 *)(0xF94))) = 0x00;
+}
+
+static __attribute__((inline)) void GPIO_Set_Pin6_High(void)
+{
+    (*((volatile LATC_t *)0xF8B)).LATC6 = 1;
+}
+
+static __attribute__((inline)) void GPIO_Write_PortC(uint8 value)
+{
+    (*((volatile LATC_t *)0xF8B)).ALL_BITS = value;
+}
+
+
+
+
+
+int main(void)
+{
+    GPIO_PortC_Init();
+
+    GPIO_Write_PortC(0xAA);
 
     _delay((unsigned long)((2000)*(8000000UL/4000.0)));
 
+    GPIO_Set_Pin6_High();
 
-    (((*((volatile unsigned char *)(0xF8B)))) |= (1 << 0x1));
-    ((*((volatile unsigned char *)(0xF8B)))) |= (1 << 0x3);
+   while(1)
+{
+    (*((volatile LATC_t *)0xF8B)).ALL_BITS = 0x00;
+    _delay((unsigned long)((500)*(8000000UL/4000.0)));
 
-    _delay((unsigned long)((2000)*(8000000UL/4000.0)));
+    (*((volatile LATC_t *)0xF8B)).LATC0 = 1;
+    (*((volatile LATC_t *)0xF8B)).LATC7 = 1;
+    _delay((unsigned long)((500)*(8000000UL/4000.0)));
 
+    (*((volatile LATC_t *)0xF8B)).LATC1 = 1;
+    (*((volatile LATC_t *)0xF8B)).LATC6 = 1;
+    _delay((unsigned long)((500)*(8000000UL/4000.0)));
 
-    (((*((volatile unsigned char *)(0xF8B)))) &= ~(1 << 0x1));
-    ((*((volatile unsigned char *)(0xF8B)))) &= ~(1 << 0x3);
+    (*((volatile LATC_t *)0xF8B)).LATC2 = 1;
+    (*((volatile LATC_t *)0xF8B)).LATC5 = 1;
+    _delay((unsigned long)((500)*(8000000UL/4000.0)));
 
-    _delay((unsigned long)((2000)*(8000000UL/4000.0)));
+    (*((volatile LATC_t *)0xF8B)).LATC3 = 1;
+    (*((volatile LATC_t *)0xF8B)).LATC4 = 1;
+    _delay((unsigned long)((500)*(8000000UL/4000.0)));
 
+    (*((volatile LATC_t *)0xF8B)).ALL_BITS = 0x00;
+    _delay((unsigned long)((500)*(8000000UL/4000.0)));
+}
 
-    (((*((volatile unsigned char *)(0xF8B)))) ^= (1 << 0x1));
-    ((*((volatile unsigned char *)(0xF8B)))) ^= (1 << 0x3);
-
-    while(1) {
-
-    }
-
-    return (0);
+    return 0;
 }

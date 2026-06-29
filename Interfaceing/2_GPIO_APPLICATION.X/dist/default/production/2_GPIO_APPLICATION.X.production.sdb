@@ -3,7 +3,13 @@
 [d edition pro ]
 [d chip 18F4620 ]
 [d frameptr 4065 ]
-"23 C:\Users\saher\Desktop\Github Projects\Embedded_System_diploma\Interfaceing\2_GPIO_APPLICATION.X\application.c
+"117 C:\Users\saher\Desktop\Github Projects\Embedded_System_diploma\Interfaceing\2_GPIO_APPLICATION.X\application.c
+[v _GPIO_PortC_Init GPIO_PortC_Init `T(v  1 s 1 GPIO_PortC_Init ]
+"122
+[v _GPIO_Set_Pin6_High GPIO_Set_Pin6_High `T(v  1 s 1 GPIO_Set_Pin6_High ]
+"127
+[v _GPIO_Write_PortC GPIO_Write_PortC `T(v  1 s 1 GPIO_Write_PortC ]
+"136
 [v _main main `(i  1 e 2 0 ]
 "7 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\__lldiv.c
 [v ___lldiv __lldiv `(ul  1 e 4 0 ]
@@ -65,8 +71,27 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v3.10\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"23 C:\Users\saher\Desktop\Github Projects\Embedded_System_diploma\Interfaceing\2_GPIO_APPLICATION.X\application.c
+"136 C:\Users\saher\Desktop\Github Projects\Embedded_System_diploma\Interfaceing\2_GPIO_APPLICATION.X\application.c
 [v _main main `(i  1 e 2 0 ]
 {
-"50
+"172
+} 0
+"127
+[v _GPIO_Write_PortC GPIO_Write_PortC `T(v  1 s 1 GPIO_Write_PortC ]
+{
+[v GPIO_Write_PortC@value value `uc  1 p 1 wreg ]
+[v GPIO_Write_PortC@value value `uc  1 p 1 wreg ]
+"129
+[v GPIO_Write_PortC@value value `uc  1 p 1 0 ]
+"130
+} 1
+"122
+[v _GPIO_Set_Pin6_High GPIO_Set_Pin6_High `T(v  1 s 1 GPIO_Set_Pin6_High ]
+{
+"125
+} 0
+"117
+[v _GPIO_PortC_Init GPIO_PortC_Init `T(v  1 s 1 GPIO_PortC_Init ]
+{
+"120
 } 0
