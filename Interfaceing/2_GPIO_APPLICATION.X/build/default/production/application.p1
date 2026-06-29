@@ -482,62 +482,60 @@ Version 4.0 HI-TECH Software Intermediate Code
 "68
 [p x EBTRB  =  OFF       ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"27 application.c
-[; ;application.c: 27: int main()
+"23 application.c
+[; ;application.c: 23: int main() {
 [v _main `(i ~T0 @X0 1 ef ]
-"28
-[; ;application.c: 28: {
 {
 [e :U _main ]
 [f ]
-"29
-[; ;application.c: 29:     ((*((volatile unsigned char *)(0xF94)))) = 0x00 ;
+"24
+[; ;application.c: 24:     ((*((volatile unsigned char *)(0xF94)))) = 0x00;
 [e = *U -> -> 3988 `i `*Vuc -> -> 0 `i `uc ]
+"25
+[; ;application.c: 25:     ((*((volatile unsigned char *)(0xF8B)))) = 0x55;
+[e = *U -> -> 3979 `i `*Vuc -> -> 85 `i `uc ]
+"27
+[; ;application.c: 27:     _delay((unsigned long)((2000)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
 "30
-[; ;application.c: 30:     while(1){
+[; ;application.c: 30:     (((*((volatile unsigned char *)(0xF8B)))) |= (1 << 0x1));
+[e =| *U -> -> 3979 `i `*Vuc -> << -> 1 `i -> 1 `i `uc ]
+"31
+[; ;application.c: 31:     ((*((volatile unsigned char *)(0xF8B)))) |= (1 << 0x3);
+[e =| *U -> -> 3979 `i `*Vuc -> << -> 1 `i -> 3 `i `uc ]
+"33
+[; ;application.c: 33:     _delay((unsigned long)((2000)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"36
+[; ;application.c: 36:     (((*((volatile unsigned char *)(0xF8B)))) &= ~(1 << 0x1));
+[e =& *U -> -> 3979 `i `*Vuc -> ~ << -> 1 `i -> 1 `i `uc ]
+"37
+[; ;application.c: 37:     ((*((volatile unsigned char *)(0xF8B)))) &= ~(1 << 0x3);
+[e =& *U -> -> 3979 `i `*Vuc -> ~ << -> 1 `i -> 3 `i `uc ]
+"39
+[; ;application.c: 39:     _delay((unsigned long)((2000)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+"42
+[; ;application.c: 42:     (((*((volatile unsigned char *)(0xF8B)))) ^= (1 << 0x1));
+[e =^ *U -> -> 3979 `i `*Vuc -> << -> 1 `i -> 1 `i `uc ]
+"43
+[; ;application.c: 43:     ((*((volatile unsigned char *)(0xF8B)))) ^= (1 << 0x3);
+[e =^ *U -> -> 3979 `i `*Vuc -> << -> 1 `i -> 3 `i `uc ]
+"45
+[; ;application.c: 45:     while(1) {
 [e :U 296 ]
 {
-"31
-[; ;application.c: 31:         ((*((volatile unsigned char *)(0xF8B)))) = 0x00;
-[e = *U -> -> 3979 `i `*Vuc -> -> 0 `i `uc ]
-"32
-[; ;application.c: 32:         _delay((unsigned long)((500)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"33
-[; ;application.c: 33:         ((*((volatile unsigned char *)(0xF8B)))) |= (0x1 | 0x80);
-[e =| *U -> -> 3979 `i `*Vuc -> | -> 1 `i -> 128 `i `uc ]
-"34
-[; ;application.c: 34:         _delay((unsigned long)((500)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"35
-[; ;application.c: 35:         ((*((volatile unsigned char *)(0xF8B)))) |= (0x2 | 0x40);
-[e =| *U -> -> 3979 `i `*Vuc -> | -> 2 `i -> 64 `i `uc ]
-"36
-[; ;application.c: 36:         _delay((unsigned long)((500)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"37
-[; ;application.c: 37:         ((*((volatile unsigned char *)(0xF8B)))) |= (0x4 | 0x20);
-[e =| *U -> -> 3979 `i `*Vuc -> | -> 4 `i -> 32 `i `uc ]
-"38
-[; ;application.c: 38:         _delay((unsigned long)((500)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"39
-[; ;application.c: 39:         ((*((volatile unsigned char *)(0xF8B)))) |= (0x8 | 0x10);
-[e =| *U -> -> 3979 `i `*Vuc -> | -> 8 `i -> 16 `i `uc ]
-"40
-[; ;application.c: 40:         _delay((unsigned long)((500)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"42
-[; ;application.c: 42:     }
+"47
+[; ;application.c: 47:     }
 }
 [e :U 295 ]
 [e $U 296  ]
 [e :U 297 ]
-"43
-[; ;application.c: 43:     return (0);
+"49
+[; ;application.c: 49:     return (0);
 [e ) -> 0 `i ]
 [e $UE 294  ]
-"44
-[; ;application.c: 44: }
+"50
+[; ;application.c: 50: }
 [e :UE 294 ]
 }

@@ -7,7 +7,13 @@
 # 1 "C:\\Program Files\\Microchip\\xc8\\v3.10\\pic\\include/language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "application.c" 2
-# 10 "application.c"
+
+
+
+
+
+
+
 # 1 "./application.h" 1
 # 11 "./application.h"
 # 1 "./ECU_Layer/LED/ecu_led.h" 1
@@ -4877,23 +4883,33 @@ char *tempnam(const char *, const char *);
 # 14 "./ECU_Layer/LED/../../MCAL_Layer/GPIO/hal_gpio.h" 2
 # 12 "./ECU_Layer/LED/ecu_led.h" 2
 # 12 "./application.h" 2
-# 11 "application.c" 2
-# 27 "application.c"
-int main()
-{
-    ((*((volatile unsigned char *)(0xF94)))) = 0x00 ;
-    while(1){
-        ((*((volatile unsigned char *)(0xF8B)))) = 0x00;
-        _delay((unsigned long)((500)*(8000000UL/4000.0)));
-        ((*((volatile unsigned char *)(0xF8B)))) |= (0x1 | 0x80);
-        _delay((unsigned long)((500)*(8000000UL/4000.0)));
-        ((*((volatile unsigned char *)(0xF8B)))) |= (0x2 | 0x40);
-        _delay((unsigned long)((500)*(8000000UL/4000.0)));
-        ((*((volatile unsigned char *)(0xF8B)))) |= (0x4 | 0x20);
-        _delay((unsigned long)((500)*(8000000UL/4000.0)));
-        ((*((volatile unsigned char *)(0xF8B)))) |= (0x8 | 0x10);
-        _delay((unsigned long)((500)*(8000000UL/4000.0)));
+# 9 "application.c" 2
+# 23 "application.c"
+int main() {
+    ((*((volatile unsigned char *)(0xF94)))) = 0x00;
+    ((*((volatile unsigned char *)(0xF8B)))) = 0x55;
+
+    _delay((unsigned long)((2000)*(8000000UL/4000.0)));
+
+
+    (((*((volatile unsigned char *)(0xF8B)))) |= (1 << 0x1));
+    ((*((volatile unsigned char *)(0xF8B)))) |= (1 << 0x3);
+
+    _delay((unsigned long)((2000)*(8000000UL/4000.0)));
+
+
+    (((*((volatile unsigned char *)(0xF8B)))) &= ~(1 << 0x1));
+    ((*((volatile unsigned char *)(0xF8B)))) &= ~(1 << 0x3);
+
+    _delay((unsigned long)((2000)*(8000000UL/4000.0)));
+
+
+    (((*((volatile unsigned char *)(0xF8B)))) ^= (1 << 0x1));
+    ((*((volatile unsigned char *)(0xF8B)))) ^= (1 << 0x3);
+
+    while(1) {
 
     }
+
     return (0);
 }
