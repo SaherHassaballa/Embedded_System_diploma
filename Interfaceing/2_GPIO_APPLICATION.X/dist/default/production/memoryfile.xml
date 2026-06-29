@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/debug\2_GPIO_APPLICATION.X.debug.hex">
+  <executable name="dist/default/production\2_GPIO_APPLICATION.X.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>65536</length>
-      <used>164</used>
-      <free>65372</free>
+      <used>154</used>
+      <free>65382</free>
     </memory>
     <memory name="data">
       <units>bytes</units>

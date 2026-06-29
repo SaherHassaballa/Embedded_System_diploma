@@ -1,27 +1,27 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\saher\AppData\Local\Temp\xcAsdkc.0\driver_tmp_3.o
- -Odist/default/debug\2_GPIO_APPLICATION.X.debug.hex
- -logfile=dist/default/debug\2_GPIO_APPLICATION.X.debug.hxl
+ C:\Users\saher\AppData\Local\Temp\xcAse4g.0\driver_tmp_3.o
+ -Odist/default/production\2_GPIO_APPLICATION.X.production.hex
+ -logfile=dist/default/production\2_GPIO_APPLICATION.X.production.hxl
  -addressing=1
  -break=300000
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 3h		(C:\Users\saher\AppData\Local\Temp\xcAsdkc.0\driver_tmp_3.o)
-  1000h - 109Bh		(C:\Users\saher\AppData\Local\Temp\xcAsdkc.0\driver_tmp_3.o)
-  FFFCh - FFFFh		(C:\Users\saher\AppData\Local\Temp\xcAsdkc.0\driver_tmp_3.o)
-  300000h - 30000Dh		(C:\Users\saher\AppData\Local\Temp\xcAsdkc.0\driver_tmp_3.o)
+  0h - 3h		(C:\Users\saher\AppData\Local\Temp\xcAse4g.0\driver_tmp_3.o)
+  1000h - 1091h		(C:\Users\saher\AppData\Local\Temp\xcAse4g.0\driver_tmp_3.o)
+  FFFCh - FFFFh		(C:\Users\saher\AppData\Local\Temp\xcAse4g.0\driver_tmp_3.o)
+  300000h - 30000Dh		(C:\Users\saher\AppData\Local\Temp\xcAse4g.0\driver_tmp_3.o)
  Unused ranges:
   4h - FFFh
-  109Ch - FFFBh
+  1092h - FFFBh
   10000h - 2FFFFFh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\saher\AppData\Local\Temp\xcAsdkc.0\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\saher\AppData\Local\Temp\xcAse4g.0\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -36,7 +36,7 @@
 00001060 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001070 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00001080 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00001090 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 -- -- -- --
+00001090 | H1 H1 -- -- -- -- -- -- -- -- -- -- -- -- -- --
 ----------------------------------------------------------
 0000FFF0 | -- -- -- -- -- -- -- -- -- -- -- -- H1 H1 H1 H1
 ----------------------------------------------------------

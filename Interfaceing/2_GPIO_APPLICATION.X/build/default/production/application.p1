@@ -501,32 +501,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;application.c: 31:         ((*((volatile unsigned char *)(0xF8B)))) = 0x00;
 [e = *U -> -> 3979 `i `*Vuc -> -> 0 `i `uc ]
 "32
-[; ;application.c: 32:         _delay((unsigned long)((2000)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+[; ;application.c: 32:         _delay((unsigned long)((500)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
 "33
 [; ;application.c: 33:         ((*((volatile unsigned char *)(0xF8B)))) |= (0x1 | 0x80);
 [e =| *U -> -> 3979 `i `*Vuc -> | -> 1 `i -> 128 `i `uc ]
 "34
-[; ;application.c: 34:         _delay((unsigned long)((2000)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+[; ;application.c: 34:         _delay((unsigned long)((500)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
 "35
 [; ;application.c: 35:         ((*((volatile unsigned char *)(0xF8B)))) |= (0x2 | 0x40);
 [e =| *U -> -> 3979 `i `*Vuc -> | -> 2 `i -> 64 `i `uc ]
 "36
-[; ;application.c: 36:         _delay((unsigned long)((2000)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+[; ;application.c: 36:         _delay((unsigned long)((500)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
 "37
 [; ;application.c: 37:         ((*((volatile unsigned char *)(0xF8B)))) |= (0x4 | 0x20);
 [e =| *U -> -> 3979 `i `*Vuc -> | -> 4 `i -> 32 `i `uc ]
 "38
-[; ;application.c: 38:         _delay((unsigned long)((2000)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+[; ;application.c: 38:         _delay((unsigned long)((500)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
 "39
 [; ;application.c: 39:         ((*((volatile unsigned char *)(0xF8B)))) |= (0x8 | 0x10);
 [e =| *U -> -> 3979 `i `*Vuc -> | -> 8 `i -> 16 `i `uc ]
 "40
-[; ;application.c: 40:         _delay((unsigned long)((2000)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+[; ;application.c: 40:         _delay((unsigned long)((500)*(8000000UL/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
 "42
 [; ;application.c: 42:     }
 }

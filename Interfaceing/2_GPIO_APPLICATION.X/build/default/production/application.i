@@ -4884,15 +4884,15 @@ int main()
     ((*((volatile unsigned char *)(0xF94)))) = 0x00 ;
     while(1){
         ((*((volatile unsigned char *)(0xF8B)))) = 0x00;
-        _delay((unsigned long)((2000)*(8000000UL/4000.0)));
+        _delay((unsigned long)((500)*(8000000UL/4000.0)));
         ((*((volatile unsigned char *)(0xF8B)))) |= (0x1 | 0x80);
-        _delay((unsigned long)((2000)*(8000000UL/4000.0)));
+        _delay((unsigned long)((500)*(8000000UL/4000.0)));
         ((*((volatile unsigned char *)(0xF8B)))) |= (0x2 | 0x40);
-        _delay((unsigned long)((2000)*(8000000UL/4000.0)));
+        _delay((unsigned long)((500)*(8000000UL/4000.0)));
         ((*((volatile unsigned char *)(0xF8B)))) |= (0x4 | 0x20);
-        _delay((unsigned long)((2000)*(8000000UL/4000.0)));
+        _delay((unsigned long)((500)*(8000000UL/4000.0)));
         ((*((volatile unsigned char *)(0xF8B)))) |= (0x8 | 0x10);
-        _delay((unsigned long)((2000)*(8000000UL/4000.0)));
+        _delay((unsigned long)((500)*(8000000UL/4000.0)));
 
     }
     return (0);
