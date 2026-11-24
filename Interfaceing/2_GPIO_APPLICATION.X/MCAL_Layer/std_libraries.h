@@ -10,5 +10,14 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+/* Section : Include */
+
+/* Section : Macro Declarations */
+
+/* Section : Macro Functions Declarations */
+
+/* Section : Data Type Declarations */
+
+/* Section : Function Declarations */
 
 #endif	/* STD_LIBRARIES_H */

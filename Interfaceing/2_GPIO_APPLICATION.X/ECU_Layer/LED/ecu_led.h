@@ -10,5 +10,15 @@
 
 #include"../../MCAL_Layer/GPIO/hal_gpio.h"
 
+/* Section : Include */
+
+/* Section : Macro Declarations */
+
+/* Section : Macro Functions Declarations */
+
+/* Section : Data Type Declarations */
+
+/* Section : Function Declarations */
+
 #endif	/* ECU_LED_H */
 

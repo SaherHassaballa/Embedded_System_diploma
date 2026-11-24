@@ -11,7 +11,15 @@
 #include "compiler.h"
 #include "std_libraries.h"
 
+/* Section : Include */
 
+/* Section : Macro Declarations */
+
+/* Section : Macro Functions Declarations */
+
+/* Section : Data Type Declarations */
+
+/* Section : Function Declarations */
 
 #endif	/* MCAL_STD_TYPES_H */
 

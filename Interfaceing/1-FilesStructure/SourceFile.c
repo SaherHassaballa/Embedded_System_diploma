@@ -7,9 +7,11 @@
 
 /*--------------------------- include HeaderFile --------------------------*/
 
-/*---------------------- Variables ---------------------*/
+/*---------------------- Variables Defination ---------------------*/
+// the variables will use in source file 
 
 /*------------------------Inline function decleration or Definition -----------------------*/
+// function with inline keyword
 
 /*--------------------------- Function Defination --------------------------*/
 

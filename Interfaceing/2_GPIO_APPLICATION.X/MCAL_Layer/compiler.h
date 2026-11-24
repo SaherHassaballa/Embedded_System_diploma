@@ -10,5 +10,15 @@
 
 #include <xc.h>
 
+/* Section : Include */
+
+/* Section : Macro Declarations */
+
+/* Section : Macro Functions Declarations */
+
+/* Section : Data Type Declarations */
+
+/* Section : Function Declarations */
+
 #endif	/* COMPILER_H */
 
